@@ -1,0 +1,47 @@
+body {
+    background-image: linear-gradient(rgb(10, 98, 186), rgb(93, 189, 196));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.title {
+    text-align: center;
+    font-size: 27px;
+}
+
+.player-options {
+    font-size: 1rem;
+}
+
+.player-choices {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 5em;
+    height: fit-content;
+    margin: 15px;
+    background-color: inherit;
+}
+
+button:hover {
+    background-color: rgb(4, 255, 0);
+    transition: background .3s ease-in;
+    box-shadow: 3px 3px 3px rgb(4, 255, 0);
+}
+
+.choice-buttons {
+    display: flex;
+}

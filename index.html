@@ -4,16 +4,25 @@
         <meta charset="UTF-8">
         <title>Rock Paper Scissor</title>
         <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVQI12P4//8/AAX+Av7czFnnAAAAAElFTkSuQmCC">
+        <link rel="stylesheet" href="./style.css">
     </head>
     <body>
-        <div class="choice-buttons">
-            <button id="rock">Rock</button>
-            <button id="paper">Paper</button>
-            <button id="scissor">Scissor</button>
+        <h1 class="title">Rock Paper Scissor against AI!</h1>
+        <div class="player-choices">
+            <h1 class="player-options">Select your option!</h1>
+            <div class="choice-buttons">
+                <button id="rock"><font size="+6" color="#747473">&#x1f44a;</font></button>
+                <button id="paper"><font size="+6" color="#00C6F3">&#x1f590;</font></button>
+                <button id="scissor"><font size="+6" color="#FF0000">&#x270c;</font></button>
+            </div>
         </div>
 
-    <div id="results"></div>
-
+    <div id="results">
+        <p id="result">Let the game begin!</p>
+        <p id="player-score">Player score is: 0</p>
+        <p id="computer-score">Computer score is: 0</p>
+    </div>
+    <button id="reset" onclick="window.location.reload()">Reset</button>
     <script src="./script.js"></script>
     </body>
 </html>
