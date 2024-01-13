@@ -1,12 +1,14 @@
 const roundResult = document.querySelector('#result')
 const userPoints = document.querySelector('#player-score')
 const computerPoints = document.querySelector('#computer-score')
+const announceWinner = document.querySelector('#winner')
+console.log(announceWinner)
 
 const choiceBtns = document.querySelectorAll('button')
 choiceBtns.forEach(button => button.addEventListener('click', (e) => {
     const result = playRound(button.id, computerPlay())
     roundResult.textContent = result
-    console.log(checkWinner())
+    
 }))
 
 function computerPlay () {
@@ -18,6 +20,15 @@ function computerPlay () {
 let playerScore = 0
 let computerScore = 0
 function playRound (player, computer) {
+    isGameOver()
+    if (isGameOver() === true) {
+        return
+    }
+    if (playerScore > computerScore) {
+        announceWinner.textContent = 'The winner is: Player!'
+    } else if(computerScore > playerScore) {
+        announceWinner.textContent = 'The winner is: Computer!'
+    }
     if (
         (player === "rock" && computer === "scissor") ||
         (player === "scissor" && computer === "paper") ||
@@ -39,14 +50,6 @@ function playRound (player, computer) {
     }
 }
 
-function checkWinner () {
-    let player = playerScore
-    let computer = computerScore
-    if (player === computer) {
-        console.log('It\'s a draw!')
-    } else if (player > computer) {
-        console.log(`Player is the winner!`)
-    } else {
-        console.log('Computer is the winner!')
-    }
+function isGameOver () {
+   return playerScore === 5 || computerPoints === 5
 }
