@@ -1,7 +1,7 @@
 const roundResult = document.querySelector('#result')
 const userPoints = document.querySelector('#player-score')
 const computerPoints = document.querySelector('#computer-score')
-const announceWinner = document.querySelector('#winner')
+const announceWinner = document.querySelector('#complete')
 console.log(announceWinner)
 
 const choiceBtns = document.querySelectorAll('button')
@@ -22,13 +22,9 @@ let computerScore = 0
 function playRound (player, computer) {
     isGameOver()
     if (isGameOver() === true) {
-        return
+        return playerScore > computerScore ? announceWinner.textContent = 'The winner is Player!' : announceWinner.textContent = 'The winner is Computer!'
     }
-    if (playerScore > computerScore) {
-        announceWinner.textContent = 'The winner is: Player!'
-    } else if(computerScore > playerScore) {
-        announceWinner.textContent = 'The winner is: Computer!'
-    }
+
     if (
         (player === "rock" && computer === "scissor") ||
         (player === "scissor" && computer === "paper") ||
