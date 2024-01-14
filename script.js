@@ -20,9 +20,9 @@ function computerPlay () {
 let playerScore = 0
 let computerScore = 0
 function playRound (player, computer) {
-    isGameOver()
-    if (isGameOver() === true) {
-        return playerScore > computerScore ? announceWinner.textContent = 'The winner is Player!' : announceWinner.textContent = 'The winner is Computer!'
+
+    if (playerScore === 5 || computerScore === 5) {
+        return playerScore > computerScore ? announceWinner.textContent = 'Player wins!' : announceWinner.textContent = 'Computer Wins!'
     }
 
     if (
@@ -44,8 +44,4 @@ function playRound (player, computer) {
     } else {
         return `It's a draw!`
     }
-}
-
-function isGameOver () {
-   return playerScore === 5 || computerPoints === 5
 }
