@@ -1,21 +1,38 @@
+@font-face {
+    font-family: game;
+    src: url(./VeniteAdoremus-rgRBA.ttf)
+}
+
+@font-face {
+    font-family: dragon-hunter;
+    src: url(./DragonHunter-9Ynxj.otf);
+}
+
+@font-face {
+    font-family: blomberg;
+    src: url(./Blomberg-8MKKZ.otf);
+}
+
 body {
     background-image: linear-gradient(rgb(10, 98, 186), rgb(93, 189, 196));
+    background-repeat: no-repeat;
+    font-display: swap;
+    font-size: clamp(1rem + 0.75rem + 1vw + 5rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: auto;
 }
 
 .title {
     text-align: center;
-    font-size: 70px;
-    font-family: game;
+    font-size: 4.7rem;
+    font-family: "game", 'Times New Roman', Times, serif;
 }
 
 .player-options {
-    font-family: dragon-hunter;
-    font-size: 3rem;
+    font-family: "dragon-hunter", 'Times New Roman', Times, serif;
+    font-size: 3.5rem;
 }
 
 .player-choices {
@@ -23,7 +40,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
 }
 
 button {
@@ -34,13 +50,13 @@ button {
     border-radius: 10px;
     width: 5em;
     height: fit-content;
-    margin: 15px;
+    margin: 10px;
     background-color: inherit;
 }
 
 button:hover {
     background-color: rgb(255, 238, 0);
-    transition: background .3s ease-in;
+    transition: background .1s ease-in;
     box-shadow: 3px 3px 3px rgb(255, 238, 0);
 }
 
@@ -49,11 +65,11 @@ button:hover {
 }
 
 #results {
-    font-size: 3rem;
-    font-family: blomberg;
+    font-size: 2rem;
+    font-family: "blomberg", 'Times New Roman', Times, serif;
 }
 
 #reset {
     font-size: 2rem;
-    font-family: blomberg;
+    font-family: "blomberg", 'Times New Roman', Times, serif;
 }
